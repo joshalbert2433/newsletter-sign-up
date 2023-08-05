@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply sm:bg-[#36384D];
+    }
+
+    main {
+        @apply bg-white;
+    }
+}
+
 * {
     /* outline: 1px solid lightblue; */
 }
@@ -11,4 +21,9 @@
 html {
     font-family: "Roboto", sans-serif;
     font-family: "Rubik", sans-serif;
+    color: #222541;
+}
+
+.dismiss-btn:hover {
+    box-shadow: 0px 11px 35px -3px #ff5d5e;
 }

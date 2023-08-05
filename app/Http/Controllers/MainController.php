@@ -22,10 +22,14 @@ class MainController extends Controller
     {
         $request->validate([
             "email" => "required|email"
+        ], [
+            "required" => "Valid email required",
+            "email" => "Valid email required"
         ]);
 
         $userEmail = $request->input("email");
 
-        return redirect("success")->with(["userEmail" => $userEmail]);
+        session(["userEmail" => $userEmail]);
+        return redirect("success");
     }
 }
